@@ -1,17 +1,16 @@
-import Header from './components/Cabecalho'
+import Cabecalho from './components/Cabecalho'
 import Hero from './components/Hero'
+import FormVagas from './components/FormVagas'
 import ListaVagas from './containers/ListaVagas'
-
-import './global.css'
+// ... outros imports
 
 function App() {
   return (
     <>
-      <Header />
+      <Cabecalho />
       <Hero />
-      <div className="container">
-        <ListaVagas />
-      </div>
+      <FormVagas aoPesquisar={() => <ListaVagas />} />
+      <ListaVagas />
     </>
   )
 }
